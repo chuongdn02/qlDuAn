@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/boderv"
+    >
+    <TextView
+        android:gravity="center_horizontal"
+        android:id="@+id/tv_cccd"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:background="@drawable/boderv"/>
+
+
+    <TextView
+        android:id="@+id/tv_username"
+
+        android:gravity="center_horizontal"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@drawable/boderv"/>
+
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:id="@+id/tv_bac_tk"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:background="@drawable/boderv"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_weight="1"
+        android:textSize="16sp" >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true">
+
+
+            <Button
+                android:id="@+id/btn_delete"
+
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+
+                android:background="@drawable/baseline_delete_24"
+                android:onClick="onDeleteClicked" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

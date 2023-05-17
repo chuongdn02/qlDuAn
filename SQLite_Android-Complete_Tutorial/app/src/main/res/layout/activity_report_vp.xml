@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thông tin người vi phạm"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+
+
+    <EditText
+        android:id="@+id/etCCCD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số CCCD người vi phạm"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Địa điểm"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <Spinner
+        android:id="@+id/vitriVP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/khu_vuc"
+        android:entries="@array/khu_vuc"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thông tin vi phạm"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <Spinner
+        android:id="@+id/spLoaiViPham"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/loai_vi_pham"
+        android:entries="@array/loai_vi_pham"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loại xe"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <Spinner
+        android:id="@+id/loaixe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/loai_xe"
+        android:entries="@array/vehicle_types"/>
+
+    <EditText
+        android:id="@+id/etNoiDungViPham"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Biển số"/>
+
+    <EditText
+        android:id="@+id/etTienPhat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tiền phạt"/>
+
+    <Button
+        android:id="@+id/btnLapBienBan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lập biên bản"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

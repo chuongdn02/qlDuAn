@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_cccd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CCCD: " />
+
+    <TextView
+        android:id="@+id/tv_loaivipham"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loại vi phạm: " />
+
+    <TextView
+        android:id="@+id/tv_loaixe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loại xe: " />
+
+    <TextView
+        android:id="@+id/tv_bienso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biển số: " />
+
+    <TextView
+        android:id="@+id/tv_sotienphat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số tiền phạt: " />
+
+    <TextView
+        android:id="@+id/tv_idcanbo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID cán bộ: " />
+
+    <TextView
+        android:id="@+id/tv_vitri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vị trí: " />
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvLicensePlate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="License Plate" />
+
+    <TextView
+        android:id="@+id/tvVehicleType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vehicle Type" />
+
+    <TextView
+        android:id="@+id/tvInspectionDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inspection Date" />
+
+</LinearLayout>

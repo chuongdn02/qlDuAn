@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Thống kê vi phạm"
+        android:textSize="24sp" />
+
+    <!-- Radio button chọn loại thống kê -->
+    <RadioGroup
+        android:id="@+id/rgLoaiThongKe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:checkedButton="@id/rbLoaiXe"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbLoaiXe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Theo loại xe" />
+
+        <RadioButton
+            android:id="@+id/rbLoiVP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Theo loại vi phạm" />
+
+        <RadioButton
+            android:id="@+id/rbViTri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Theo vị trí" />
+
+    </RadioGroup>
+
+    <!-- Spinner chọn loại xe -->
+    <Spinner
+        android:id="@+id/spnLoaiXe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:entries="@array/vehicle_types"
+        android:prompt="@string/loai_xe"
+        android:visibility="visible" />
+
+    <!-- Spinner chọn loại vi phạm -->
+    <Spinner
+        android:id="@+id/spnLoiVP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:entries="@array/loai_vi_pham"
+        android:prompt="@string/loai_vi_pham"
+        android:visibility="gone" />
+
+    <!-- Spinner chọn vị trí -->
+    <Spinner
+        android:id="@+id/spnViTri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:entries="@array/khu_vuc"
+        android:prompt="@string/khu_vuc"
+        android:visibility="gone" />
+
+    <!-- Button Lọc -->
+    <Button
+        android:id="@+id/btnLoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Lọc" />
+
+    <!-- Danh sách vi phạm -->
+    <ListView
+        android:id="@+id/lvViPham"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:dividerHeight="1dp"
+        android:padding="16dp"
+        android:visibility="gone" />
+
+    <!-- Không có dữ liệu -->
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Không có dữ liệu"
+        android:textSize="20sp" />
+</LinearLayout>

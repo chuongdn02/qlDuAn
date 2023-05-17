@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">SqliteTutorial</string>
+    <string name="loai_xe">Loại xe</string>
+    <string name="khu_vuc">khu vực</string>
+    <string name="loai_vi_pham">Loại vi phạm</string>
+    <string-array name="vehicle_types">
+        <item>Xe máy</item>
+        <item>Xe hơi</item>
+        <item>Xe tải</item>
+        <item>Xe điện</item>
+    </string-array>
+    <string-array name="khu_vuc">
+        <item>Hải Châu</item>
+        <item>Xe hơi</item>
+        <item>Xe tải</item>
+        <item>Xe điện</item>
+    </string-array>
+    <string-array name="loai_vi_pham">
+        <item>Không đội mũ bảo hiểm</item>
+        <item>Điều khiển xe máy không đội mũ bảo hiểm</item>
+        <item>Vượt đèn đỏ</item>
+        <item>Vượt quá tốc độ cho phép</item>
+        <item>...</item>
+    </string-array>
+    <string-array name="chucvu">
+        <item>Tất cả</item>
+        <item>Cán bộ</item>
+        <item>Cảnh sát</item>
+        <item>Người dùng</item>
+    </string-array>
+
+</resources>

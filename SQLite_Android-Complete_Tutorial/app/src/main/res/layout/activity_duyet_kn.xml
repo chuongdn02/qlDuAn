@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvKieuXe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loại xe: "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvKieuXeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvKieuXe"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvLoiVP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvKieuXeValue"
+        android:text="Lỗi vi phạm: "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvLoiVPValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLoiVP"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvViTri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLoiVPValue"
+        android:text="Vị trí: "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvViTriValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvViTri"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnDuyet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvViTriValue"
+        android:text="Duyệt" />
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/tvBienSoXe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biển số xe:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvLoaiXe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loại xe:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvNgayThang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngày tháng:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvDiaDiem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Địa điểm:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvNoiDung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nội dung:"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnSua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sửa thông tin" />
+
+</LinearLayout>

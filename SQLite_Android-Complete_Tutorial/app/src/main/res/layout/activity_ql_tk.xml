@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <EditText
+
+
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/et_find"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Nhập từ khoá tìm kiếm...        "
+            android:background="@drawable/boderv"
+            android:padding="10dp"/>
+
+        <Button
+            android:layout_toRightOf="@+id/et_find"
+            android:id="@+id/btn_find"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tìm kiếm" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="15dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="chức vụ: " />
+
+        <Spinner
+            android:id="@+id/chucvu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:prompt="@string/loai_xe"
+            android:entries="@array/chucvu"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Cấp tài khoản" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/boderv">
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="CCCD/CMND"
+            android:background="@drawable/boderv"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:text="Tài khoản"
+            android:textStyle="bold"
+            android:background="@drawable/boderv"/>
+
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@+id/tv_cccd"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:text="Chức vụ"
+            android:textSize="16sp"
+            android:background="@drawable/boderv"/>
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@+id/tv_bac_tk"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Chức năng"
+
+            android:background="@drawable/boderv"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAccountList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
