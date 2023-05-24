@@ -1,49 +1,94 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="horizontal"
+    android:background="@drawable/boderv"
+    android:padding="8dp">
 
-    <TextView
-        android:id="@+id/tv_cccd"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CCCD: " />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tv_loaivipham"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Loại vi phạm: " />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_loaixe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Loại xe: " />
+            <TextView
+                android:id="@+id/tv_name_vp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tai nạn giao thông"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:textSize="18dp" />
 
-    <TextView
-        android:id="@+id/tv_bienso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Biển số: " />
+            <TextView
+                android:id="@+id/loai_xe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loại xe: ô tô" />
 
-    <TextView
-        android:id="@+id/tv_sotienphat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Số tiền phạt: " />
+            <TextView
+                android:id="@+id/tien_phat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200.000đ" />
 
-    <TextView
-        android:id="@+id/tv_idcanbo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ID cán bộ: " />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_vitri"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Vị trí: " />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="end">
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_location_on_24"/>
+
+                <TextView
+                    android:id="@+id/viTri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="quan ngu hanh son"
+                    android:textColor="#2196F3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_numbers_24"/>
+
+                <TextView
+                    android:id="@+id/soQuyetDinh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Số quyết định"
+                    android:textColor="#F44336"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

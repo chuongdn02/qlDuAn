@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.jovanovic.stefan.sqlitetutorial">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -8,18 +11,30 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Sua_bien_ban"
+            android:exported="false" />
+        <activity
+            android:name=".Trang_ca_nhan"
+            android:exported="false" />
+        <activity
+            android:name=".Trang_chu_user"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".ThongKeActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".Function.Dang_nhap"
+            android:exported="false" />
         <activity
             android:name=".Activity_ql_bienban"
             android:exported="false" />
         <activity
-            android:name=".QuanLyBienBanActivity"
-            android:exported="false" />
-        <activity
             android:name=".ql_tk_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".chi_tiet_bb"
@@ -43,7 +58,7 @@
             android:name=".Function.TraCuu"
             android:exported="false" />
         <activity
-            android:name=".Function.Dang_nhap"
+            android:name=".bat_dau_activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

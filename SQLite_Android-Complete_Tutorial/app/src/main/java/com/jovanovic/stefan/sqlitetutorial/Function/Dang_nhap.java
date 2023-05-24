@@ -12,10 +12,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
+
+import com.jovanovic.stefan.sqlitetutorial.Activity_ql_bienban;
 import com.jovanovic.stefan.sqlitetutorial.Handle.DBHelper;
-import com.jovanovic.stefan.sqlitetutorial.MainActivity;
 import com.jovanovic.stefan.sqlitetutorial.Model.Tai_khoan;
 import com.jovanovic.stefan.sqlitetutorial.R;
+import com.jovanovic.stefan.sqlitetutorial.Trang_chu_user;
 import com.jovanovic.stefan.sqlitetutorial.ql_tk_Activity;
 
 public class Dang_nhap extends AppCompatActivity {
@@ -75,7 +77,8 @@ public class Dang_nhap extends AppCompatActivity {
                 String userLevel = acc.getBacTK();
                 switch(userLevel) {
                     case "Người dùng": // Bậc 1
-                        Intent intent1 = new Intent(Dang_nhap.this, TraCuu.class);
+                        Intent intent1 = new Intent(Dang_nhap.this, Trang_chu_user.class);
+
                         intent1.putExtra("acc", new Gson().toJson(acc));
                         startActivity(intent1);
                         break;
@@ -85,7 +88,7 @@ public class Dang_nhap extends AppCompatActivity {
                         startActivity(intent2);
                         break;
                     case "Cán bộ": // Bậc 3
-                        Intent intent3 = new Intent(Dang_nhap.this, MainActivity.class);
+                        Intent intent3 = new Intent(Dang_nhap.this, Activity_ql_bienban.class);
                         intent3.putExtra("acc", new Gson().toJson(acc));
                         startActivity(intent3);
                         break;

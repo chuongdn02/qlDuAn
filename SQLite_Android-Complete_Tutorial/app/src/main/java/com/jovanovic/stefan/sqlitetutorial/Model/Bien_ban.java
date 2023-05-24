@@ -6,20 +6,36 @@ public class Bien_ban {
     private String vtri;
     private String loaiXe;
     private String bienso;
-    private String loaiViPham;
+    private String loaiViPham,soQuyetDinh;
+
+
     private String soTienPhat;
     private int id_can_bo;
 
     public Bien_ban() {
     }
 
-    public Bien_ban(final int id, final String cccd, final String vtri, final String loaiXe, final String bienso, final String loaiViPham, final String soTienPhat, final int id_can_bo) {
+
+
+    public Bien_ban(final String cccd, final String vtri, final String loaiXe, final String bienso, final String loaiViPham, final String soQuyetDinh, final String soTienPhat, final int id_can_bo) {
+        this.cccd = cccd;
+        this.vtri = vtri;
+        this.loaiXe = loaiXe;
+        this.bienso = bienso;
+        this.loaiViPham = loaiViPham;
+        this.soQuyetDinh = soQuyetDinh;
+        this.soTienPhat = soTienPhat;
+        this.id_can_bo = id_can_bo;
+    }
+
+    public Bien_ban(final int id, final String cccd, final String vtri, final String loaiXe, final String bienso, final String loaiViPham, final String soQuyetDinh, final String soTienPhat, final int id_can_bo) {
         this.id = id;
         this.cccd = cccd;
         this.vtri = vtri;
         this.loaiXe = loaiXe;
         this.bienso = bienso;
         this.loaiViPham = loaiViPham;
+        this.soQuyetDinh = soQuyetDinh;
         this.soTienPhat = soTienPhat;
         this.id_can_bo = id_can_bo;
     }
@@ -70,6 +86,14 @@ public class Bien_ban {
 
     public void setLoaiViPham(final String loaiViPham) {
         this.loaiViPham = loaiViPham;
+    }
+
+    public String getSoQuyetDinh() {
+        return this.soQuyetDinh;
+    }
+
+    public void setSoQuyetDinh(final String soQuyetDinh) {
+        this.soQuyetDinh = soQuyetDinh;
     }
 
     public String getSoTienPhat() {

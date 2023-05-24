@@ -2,19 +2,18 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
+
         <EditText
-
-
             android:layout_marginHorizontal="10dp"
             android:id="@+id/et_find"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Nhập từ khoá tìm kiếm...        "
+            android:hint="Nhập từ khoá tìm kiếm..."
             android:background="@drawable/boderv"
             android:padding="10dp"/>
 
@@ -29,6 +28,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,20 +37,18 @@
             android:orientation="vertical">
 
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="khu vuc: " />
+                android:text="Khu vực:" />
 
             <Spinner
                 android:id="@+id/khu_vuc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:entries="@array/khu_vuc"
-               />
-
+                android:entries="@array/khu_vuc" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,46 +57,39 @@
             android:orientation="vertical">
 
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="chức vụ: " />
+                android:text="Loại xe:" />
 
             <Spinner
-                android:id="@+id/loaixe"
+                android:id="@+id/loai_xe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:entries="@array/vehicle_types" />
 
-
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="15dp"
-            android:layout_marginVertical="15dp"
-            android:orientation="vertical">
 
-            <TextView
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="15dp"-->
+<!--            android:layout_marginVertical="15dp"-->
+<!--            android:orientation="vertical">-->
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="chức vụ: " />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Loại vi phạm:" />-->
 
-            <Spinner
-                android:id="@+id/loaiVP"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:entries="@array/loai_vi_pham"
- />
+<!--            <Spinner-->
+<!--                android:id="@+id/loaiVP"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:entries="@array/loai_vi_pham" />-->
 
-
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
     </LinearLayout>
-
-
-
 
     <Button
         android:id="@+id/btn_add"
@@ -106,12 +97,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"
-        android:text="Them bien ban" />
-
+        android:text="Thêm biên bản" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="5dp"
-        android:id="@+id/recyclerViewAccountList"
+        android:id="@+id/recyclerV"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+        <TextView
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:text="Home"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:src="@drawable/img"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#A52531"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/baseline_person_24"
+            android:background="@drawable/boder"/>
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/nameUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nguyen Van Chuong"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/id_cccd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="ID: 2050531200114"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="50dp"
+            android:text="MENU"
+            android:textStyle="bold"
+            android:textColor="#A52531" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <RelativeLayout
+                android:id="@+id/Relative1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:background="@drawable/yellow">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#FFFFFF"
+                    android:text="Tài khoản"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:gravity="center"/>
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/Relative2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:background="@drawable/blue">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#FFFFFF"
+                    android:text="Tra cứu"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:gravity="center"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <RelativeLayout
+                android:id="@+id/Relative3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:background="@drawable/red">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#FFFFFF"
+                    android:text="Thư viện \n pháp luật"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:gravity="center"/>
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/Relative4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:background="@drawable/green">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#FFFFFF"
+                    android:text="Khiếu nại"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:gravity="center"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

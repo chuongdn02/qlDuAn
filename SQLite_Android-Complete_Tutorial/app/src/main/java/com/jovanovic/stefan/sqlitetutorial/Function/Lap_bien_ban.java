@@ -1,5 +1,6 @@
 package com.jovanovic.stefan.sqlitetutorial.Function;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -7,33 +8,42 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
+import com.jovanovic.stefan.sqlitetutorial.Activity_ql_bienban;
 import com.jovanovic.stefan.sqlitetutorial.Handle.DBHelper;
+import com.jovanovic.stefan.sqlitetutorial.Model.Bien_ban;
 import com.jovanovic.stefan.sqlitetutorial.Model.Tai_khoan;
 import com.jovanovic.stefan.sqlitetutorial.R;
+import com.jovanovic.stefan.sqlitetutorial.Sua_bien_ban;
+
+import java.util.Random;
 
 public class Lap_bien_ban extends AppCompatActivity {
     private EditText etCCCD;
     private Spinner spnLoaiViPham, spnLoaiXe, spnDiaDiem;
     private EditText etNoiDungViPham;
     private EditText etTienPhat;
+
+    private TextView sqd;
     private Button btnLapBienBan;
+
     private String[] loaiViPhamArr, viTriArr, loaiXeArr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_report_vp);
+        setContentView(R.layout.activity_lap_bien_ban);
 
         // Ánh xạ view
         etCCCD = findViewById(R.id.etCCCD);
         etNoiDungViPham = findViewById(R.id.etNoiDungViPham);
         etTienPhat = findViewById(R.id.etTienPhat);
-
+        sqd = findViewById(R.id.sqd);
         Spinner spvitriVP = findViewById(R.id.vitriVP);
         Spinner spLoaiViPham = findViewById(R.id.spLoaiViPham);
         Spinner spnLoaiXe = findViewById(R.id.loaixe);
@@ -55,6 +65,16 @@ public class Lap_bien_ban extends AppCompatActivity {
 
         btnLapBienBan = findViewById(R.id.btnLapBienBan);
 
+        // Random ma xac nhan
+        Random random = new Random();
+        String randomString = "";
+        for (int i = 0; i < 6; i++) {
+            int digit = random.nextInt(10);
+            randomString += String.valueOf(digit);
+        }
+        String rand = randomString;
+        sqd.setText(rand);
+
         // Thiết lập sự kiện khi click vào button
         btnLapBienBan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,11 +85,14 @@ public class Lap_bien_ban extends AppCompatActivity {
                 String loaiXe = spnLoaiXe.getSelectedItem().toString();
                 String BienSo = etNoiDungViPham.getText().toString().trim();
                 String tienPhat = etTienPhat.getText().toString().trim();
+                String soQuyetDinh = sqd.getText().toString().trim();
 
-                // Kiểm tra các trường nhập liệu có rỗng hay không
                 if (TextUtils.isEmpty(cccd)) {
                     etCCCD.setError("Vui lòng nhập CCCD/CMND");
                     etCCCD.requestFocus();
+                    return;
+                } else if (cccd.length() != 12) {
+                    etCCCD.setError("Vui lòng nhập đủ cho CCCD/CMND");
                     return;
                 }
 
@@ -80,7 +103,7 @@ public class Lap_bien_ban extends AppCompatActivity {
                 }
 
                 if (TextUtils.isEmpty(BienSo)) {
-                    etNoiDungViPham.setError("Vui lòng nhập BienSo vi phạm");
+                    etNoiDungViPham.setError("Vui lòng nhập Biển số vi phạm");
                     etNoiDungViPham.requestFocus();
                     return;
                 }
@@ -92,25 +115,25 @@ public class Lap_bien_ban extends AppCompatActivity {
 
                 String userJson = getIntent().getStringExtra("acc");
                 Gson gson = new Gson();
+
                 Tai_khoan account = gson.fromJson(userJson, Tai_khoan.class);
+                String idCanBoString = getIntent().getStringExtra("id");
+                int idCanBo = Integer.parseInt(idCanBoString);
 
-                String idCanBo = account.getCccd().toString().trim();
-
-                // Lưu thông tin vào CSDL
                 DBHelper dbHelper = new DBHelper(Lap_bien_ban.this);
-                dbHelper.insertBien_ban(cccd, loaiViPham, loaiXe, BienSo, tienPhat, idCanBo, viTri);
-                Toast.makeText(Lap_bien_ban.this, "Lập biên bản thành công", Toast.LENGTH_SHORT).show();
-
-//                boolean isSuccess = dbHelper.addAcc(new account(name, password, cccd,BacTK));
-//                if (isSuccess) {
-//                    Toast.makeText(Report_VP.this, "Registration successful", Toast.LENGTH_SHORT).show();
-//                    finish();
-//                } else {
-//                    Toast.makeText(Report_VP.this, "Registration failed", Toast.LENGTH_SHORT).show();
-//                }
-
+                boolean isSuccess = dbHelper.insertBien_ban(new Bien_ban(cccd, viTri, loaiXe, BienSo, loaiViPham, soQuyetDinh, tienPhat, idCanBo));
+                if (isSuccess) {
+                    Toast.makeText(Lap_bien_ban.this, "Lập biên bản thành công", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Lap_bien_ban.this, Activity_ql_bienban.class);
+                    intent.putExtra("idCB2",idCanBoString);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(Lap_bien_ban.this, "Đã có lỗi xảy ra", Toast.LENGTH_SHORT).show();
+                }
             }
         });
-    }
-}
 
+    }
+
+}

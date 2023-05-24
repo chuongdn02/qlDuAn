@@ -9,18 +9,40 @@
         <item>Xe tải</item>
         <item>Xe điện</item>
     </string-array>
-    <string-array name="khu_vuc">
-        <item>Hải Châu</item>
+    <string-array name="loaiXe">
+        <item>Tất cả</item>
+        <item>Xe máy</item>
         <item>Xe hơi</item>
         <item>Xe tải</item>
         <item>Xe điện</item>
     </string-array>
+    <string-array name="khu_vuc">
+        <item>Quận Hải Châu</item>
+        <item>Quận Thanh Khê</item>
+        <item>Quận Sơn Trà</item>
+        <item>Quận Ngũ Hành Sơn</item>
+        <item>Quận Liên Chiểu</item>
+        <item>Quận Cẩm Lệ</item>
+        <item>Huyện Hòa Vang</item>
+    </string-array>
+    <string-array name="khuVuc">
+        <item>Tất cả</item>
+        <item>Quận Hải Châu</item>
+        <item>Quận Thanh Khê</item>
+        <item>Quận Sơn Trà</item>
+        <item>Quận Ngũ Hành Sơn</item>
+        <item>Quận Liên Chiểu</item>
+        <item>Quận Cẩm Lệ</item>
+        <item>Huyện Hòa Vang</item>
+    </string-array>
     <string-array name="loai_vi_pham">
+        <item>Vượt quá tốc độ giới hạn</item>
+        <item>Tín hiệu đèn giao thông</item>
         <item>Không đội mũ bảo hiểm</item>
-        <item>Điều khiển xe máy không đội mũ bảo hiểm</item>
-        <item>Vượt đèn đỏ</item>
-        <item>Vượt quá tốc độ cho phép</item>
-        <item>...</item>
+        <item>Say rượu, ma túy</item>
+        <item>Điện thoại khi lái xe</item>
+        <item>Vi phạm quy tắc đường</item>
+        <item>Vi phạm giấy phép</item>
     </string-array>
     <string-array name="chucvu">
         <item>Tất cả</item>

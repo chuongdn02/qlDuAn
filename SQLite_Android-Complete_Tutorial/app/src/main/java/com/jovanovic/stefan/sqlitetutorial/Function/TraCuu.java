@@ -161,11 +161,11 @@ public class TraCuu extends AppCompatActivity {
     private List<Photo> getListPhoto(){
 
         List<Photo> list = new ArrayList<>();
-        list.add(new Photo(R.drawable.img));
-        list.add(new Photo(R.drawable.img_1));
-        list.add(new Photo(R.drawable.img_2));
-        list.add(new Photo(R.drawable.img_3));
-        list.add(new Photo(R.drawable.img_4));
+        list.add(new Photo(R.drawable.anh2));
+        list.add(new Photo(R.drawable.anh1));
+        list.add(new Photo(R.drawable.anh3));
+        list.add(new Photo(R.drawable.anh4));
+        list.add(new Photo(R.drawable.anh5));
 
         return list;
     }

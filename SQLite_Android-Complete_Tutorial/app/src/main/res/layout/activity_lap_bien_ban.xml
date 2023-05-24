@@ -1,20 +1,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     android:orientation="vertical">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thông tin người vi phạm"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"/>
+        android:layout_gravity="center"
+        android:layout_marginVertical="15dp"
+        android:text="Lập biên bản vi phạm"
+        android:textSize="25dp"
+        android:textColor="@color/red"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_numbers_24"/>
+        <TextView
+            android:layout_marginLeft="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="SQĐ:"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/sqd"
+            android:layout_marginLeft="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="1233"
+            android:textSize="15dp"
+           />
+
+    </LinearLayout>
+
 
 
 
     <EditText
+        android:layout_marginTop="10dp"
         android:id="@+id/etCCCD"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +71,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thông tin vi phạm"
+        android:text="Loại vi phạm"
         android:textStyle="bold"
         android:textSize="20sp"
         android:layout_marginTop="20dp"
@@ -71,19 +103,22 @@
         android:id="@+id/etNoiDungViPham"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Biển số"/>
+        android:hint="Biển số"
+
+        android:layout_marginVertical="10dp"/>
 
     <EditText
         android:id="@+id/etTienPhat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
         android:hint="Tiền phạt"/>
 
     <Button
         android:id="@+id/btnLapBienBan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lập biên bản"
+        android:text="Xác Nhận"
         android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"/>
 
